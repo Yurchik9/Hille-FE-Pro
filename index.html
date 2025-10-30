@@ -10,8 +10,12 @@
 <body>
     <script>
         //HW4_1
-        const name = prompt("Enter your name: ")
-        alert(`Hello, ${name}! How are you?`)
+        /* const name = prompt("Enter your name: ")
+        alert(`Hello, ${name}! How are you?`) */
+        //HW4_2
+        const num = prompt("Enter 3 digit num: ")
+        console.log(`All digits are equal? ${num[0] === num[1] && num[1] === num[2] ? "Yes" : "No"}`)
+        console.log(`Are there any equal digits? ${num[0] === num[1] || num[1] === num[2] || num[0] === num[2] ? "Yes" : "No"}`)
     </script>
 </body>
 
