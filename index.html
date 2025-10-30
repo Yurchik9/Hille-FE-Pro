@@ -17,65 +17,86 @@
         console.log(`All digits are equal? ${num[0] === num[1] && num[1] === num[2] ? "Yes" : "No"}`)
         console.log(`Are there any equal digits? ${num[0] === num[1] || num[1] === num[2] || num[0] === num[2] ? "Yes" : "No"}`) */
         //HW4_3
-        const birthYear = prompt("Enter your birth year: ")
-        if (birthYear === null) {
-            alert("It is sad that you didnt fill your birth year")
-        }
-        const city = prompt("Where do you live: ")
-        if (city === null) {
-            alert("It is sad that you didnt fill your city")
-        }
-        const sport = prompt("Your fav sport: ")
-        if (sport === null) {
-            alert("It is sad that you didnt fill your fav sport")
+        /*         const birthYear = prompt("Enter your birth year: ")
+                if (birthYear === null) {
+                    alert("It is sad that you didnt fill your birth year")
+                }
+                const city = prompt("Where do you live: ")
+                if (city === null) {
+                    alert("It is sad that you didnt fill your city")
+                }
+                const sport = prompt("Your fav sport: ")
+                if (sport === null) {
+                    alert("It is sad that you didnt fill your fav sport")
+                }
+        
+                const age = birthYear ? 2025 - Number(birthYear) : ""
+        
+                let cityMessage = ""
+                if (city) {
+                    const cityNormalized = (city[0].toUpperCase() + city.slice(1).toLowerCase()).trim()
+                    switch (cityNormalized) {
+                        case "Kyiv":
+                            cityMessage = "You live in a capital of Ukraine"
+                            break
+                        case "Washington":
+                            cityMessage = "You live in a capital of USA"
+                            break
+                        case "London":
+                            cityMessage = "You live in a capital of Britain"
+                            break
+                        default:
+                            cityMessage = `You live in a city ${cityNormalized}`
+                    }
+                } else {
+                    cityMessage = ""
+                }
+                let sportMessage = ""
+                let sportNormalized = ""
+                if (sport) {
+                    sportNormalized = (sport[0].toUpperCase() + sport.slice(1).toLowerCase()).trim()
+                    switch (sportNormalized) {
+                        case "Tennis":
+                            sportMessage = "Cool! Wanna be like Djokovic"
+                            break
+                        case "Box":
+                            sportMessage = "Cool! Wanna be like Usyk"
+                            break
+                        case "Football":
+                            sportMessage = "Cool! Wanna be like Sheva"
+                            break
+                        default:
+                            sportMessage = `Cool sport, hope you'll be great in it`
+        
+                    }
+                } else {
+                    sportMessage = ""
+                }
+                alert(`Your age is ${age || "No info"},
+        Place of living: ${cityMessage || "No info"},
+        Fav sport is ${sportNormalized || "No info"},
+        ${sportMessage || ""} `)  */
+        //HW4_4
+        let numOrStr = prompt('input number or string');
+        console.log(numOrStr)
+
+        switch (true) {
+            case numOrStr === null:
+                console.log('ви скасували')
+                break
+
+            case numOrStr.trim() === '':
+                console.log('Empty String')
+                break
+            case isNaN(+numOrStr):
+                console.log('number is Ba_NaN');
+                break;
+            default:
+                console.log('OK!');
         }
 
-        const age = birthYear ? 2025 - Number(birthYear) : ""
 
-        let cityMessage = ""
-        if (city) {
-            const cityNormalized = (city[0].toUpperCase() + city.slice(1).toLowerCase()).trim()
-            switch (cityNormalized) {
-                case "Kyiv":
-                    cityMessage = "You live in a capital of Ukraine"
-                    break
-                case "Washington":
-                    cityMessage = "You live in a capital of USA"
-                    break
-                case "London":
-                    cityMessage = "You live in a capital of Britain"
-                    break
-                default:
-                    cityMessage = `You live in a city ${cityNormalized}`
-            }
-        } else {
-            cityMessage = ""
-        }
-        let sportMessage = ""
-        let sportNormalized = ""
-        if (sport) {
-            sportNormalized = (sport[0].toUpperCase() + sport.slice(1).toLowerCase()).trim()
-            switch (sportNormalized) {
-                case "Tennis":
-                    sportMessage = "Cool! Wanna be like Djokovic"
-                    break
-                case "Box":
-                    sportMessage = "Cool! Wanna be like Usyk"
-                    break
-                case "Football":
-                    sportMessage = "Cool! Wanna be like Sheva"
-                    break
-                default:
-                    sportMessage = `Cool sport, hope you'll be great in it`
 
-            }
-        } else {
-            sportMessage = ""
-        }
-        alert(`Your age is ${age || "No info"},
-Place of living: ${cityMessage || "No info"},
-Fav sport is ${sportNormalized || "No info"},
-${sportMessage || ""} `) 
     </script>
 </body>
 
